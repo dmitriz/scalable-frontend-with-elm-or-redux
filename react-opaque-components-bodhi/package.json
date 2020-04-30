@@ -4,7 +4,9 @@
   "description": "Boilerplate for ReactJS project with hot code reloading",
   "scripts": {
     "start": "node server.js",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -47,6 +49,8 @@
     "react-dom": "^0.14.6",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
-    "whatwg-fetch": "^1.0.0"
-  }
+    "whatwg-fetch": "^1.0.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
