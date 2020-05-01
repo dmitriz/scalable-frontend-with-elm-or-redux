@@ -6,7 +6,9 @@
   "scripts": {
     "build": "node_modules/.bin/webpack",
     "start": "node_modules/.bin/webpack-dev-server",
-    "test": "node_modules/.bin/mocha --require babel-core/register --recursive src/**/__tests__/**/*-test.js"
+    "test": "node_modules/.bin/mocha --require babel-core/register --recursive src/**/__tests__/**/*-test.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Ganaraj P R <ganarajpr@gmail.com> (http://www.dhi.io/)",
   "license": "ISC",
@@ -32,6 +34,8 @@
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.0",
     "redux": "^3.3.1",
-    "redux-saga": "^0.9.3"
-  }
+    "redux-saga": "^0.9.3",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
