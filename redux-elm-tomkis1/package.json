@@ -4,7 +4,9 @@
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 3000 --hot --content-base ./",
     "test": "./node_modules/.bin/mocha --require babel-core/register --recursive --require babel-polyfill",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
@@ -26,8 +28,10 @@
     "react-redux": "^4.0.0",
     "redux": "^3.3.1",
     "redux-elm": "^2.1.1",
-    "redux-saga": "^0.10.4"
+    "redux-saga": "^0.10.4",
+    "snyk": "^1.316.1"
   },
   "author": "Tomas Weiss <tomasw@salsitasoft.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
